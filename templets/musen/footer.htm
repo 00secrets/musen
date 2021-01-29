@@ -1,0 +1,66 @@
+<div class="container advantage blog">
+<div class="row">
+<div class="col-lg-12">
+<h3>您好 HELLO!</h3>
+<p>若您有合作意向，请您为我们留言或使用以下方式联系我们，我们将尽快给你回复，</p>
+<p>并为您提供最真诚的空调服务，谢谢！</p>
+</div>
+</div>
+</div>
+<div class="container contact">
+<div class="row">
+<div class="col-lg-6">
+<form class="form-horizontal">
+<div class="form-group">
+<div class="col-sm-4">
+<input type="text" class="form-control" id="username" placeholder="您的姓名">
+<label>请正确输入您的称呼</label>
+</div>
+<div class="col-sm-8">
+<input type="text" class="form-control" id="tel" placeholder="您的固话/手机">
+<label>请正确输入您的号码</label>
+</div>
+<div class="col-sm-12">
+<textarea class="form-control" rows="3" id="words" placeholder="您的需求"></textarea>
+<label>请输入您的需求</label>
+</div>
+<div class="col-sm-12">
+<button type="button" id="send">提交留言</button>&nbsp;&nbsp;&nbsp;&nbsp;<span id="info" style="font-size:24px"></span>
+</div>
+</div>
+</form>
+</div>
+<script>
+          $(function(){
+            // alert('ok');
+            $("#send").click(function(){
+              var username = $("#username").val();
+              var tel = $("#tel").val();
+              var words = $("#words").val();
+              if (username == '' || tel == '' || words == '') {
+                return false;
+              }
+              $.post("welcome/createMsg", {"name":username, "links":tel, "message":words}, function(data){
+                $("#username").val('');
+                $("#tel").val('');
+                $("#words").val('');
+                $("#info").text(data).css("color", "green");
+              });
+            });
+          });
+        </script>
+<div class="col-lg-4 col-lg-offset-2">
+<li class="wow fadeInRight" data-wow-delay="0.2s"><b>13641236608</b></li>
+<li class="wow fadeInRight" data-wow-delay="0.4s"><a href="tencent://message/?uin=414593487&Site=北京沐森环境科技有限公司&Menu=yes"><span>在线客服</span></a></li>
+<li class="wow fadeInRight" data-wow-delay="0.6s">414593487@qq.com</li>
+<li class="wow fadeInRight" data-wow-delay="0.8s">北京市朝阳区十里河居然之家定制材料馆4号馆</li>
+<li class="ewm"><img src="/images/ewm.png"></li>
+</div>
+</div>
+</div>
+<!--end contact-->
+<footer>
+<div class="container footer">
+<li class="pull-right">Copyright © 2013 - 2016 Tocet. All Rights Reserved 北京沐森环境科技有限公司</li>
+</div>
+</footer>

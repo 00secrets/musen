@@ -1,0 +1,1 @@
+<li><a href="[field:arcurl/]" title="[field:fulltitle/]">[field:title/]<span>[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</span></a></li>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/animate.css" rel="stylesheet">
+<script src="/js/jquery1.11.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/wow.js"></script>
+<script src="/js/tocet.js"></script>
+<!--[if lt IE 9]>
+      <script src="/js/html5shiv.min.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="carousel-example-generic" class="carousel slide wow fadeInDown" data-wow-delay="0.6s" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<img src="/images/2016031614581163352239.jpg">
+</div>
+<div class="item ">
+<img src="/images/2016031614581162571428.jpg">
+</div>
+</div>
+</div>
+<!--End ban-->
+<div class="container advantage wow fadeInDown" data-wow-delay="1s">
+<div class="row">
+<div class="col-lg-12">
+<h3>沐森科技，因你而在</h3>
+<p>我们相信，只有每个环节100%满意才等于客户满意，</p>
+<p>即策略100分+设计100分+技术100分+服务100分，为这个方向，我们一直在努力！</p>
+</div>
+</div>
+</div>
+<!--End jianshe-->
+<div class="case">
+<div class="case-nav wow fadeInDown" data-wow-delay="1.4s">
+<li class="active"><a href="/anli/" alt="0">工程案例</a></li>
+</div>
+<div class="container-fluid" id="case-yc">
+<div class="row" id="case-list">
+{dede:arclist typeid=3 row=8 titlelen=30 infolen=120 orderby='pubdate'}
+<a href="[field:arcurl/]">
+<div class="col-lg-3 col-sm-6 col-xs-12">
+<div class="course-list-img">
+<img src="[field:litpic/]">
+<div class="case-ms">
+<h4>[field:title/]</h4>
+<p></p>
+[field:info/]... </div>
+</div>
+<li>[field:title/]</li>
+</div>
+</a>
+{/dede:arclist}
+</div>
+</div>
+<div class="col-lg-12  col-sm-12 col-xs-12 ">
+<a href="/anli/"><img src="/images/gd.png"></a>
+</div>
+</div>
+<!--End case-->
+<div class="container advantage blog">
+<div class="row wow fadeInDown" data-wow-delay="0.4s">
+<div class="col-lg-12">
+<h3>每一秒，我们都在专注</h3>
+<p>专注于客户满意，人与科技互动体验，精心每一项工程、追求精益求精，为您带来高端的品质享受。</p>
+</div>
+</div>
+</div>
+<div class="container blog-k" id="blog-k">
+<div class="row">
+<div class="col-lg-3 col-sm-6 col-xs-6">
+<div class="blog-kk wow fadeInLeft" data-wow-delay="0.4s">
+<div class="blog-x">
+<img src="/images/blog1.png">
+<h4>托马仕新风</h4>
+</div>
+<div class="blog-y"><p>过滤5微米以上的尘埃粒<br>送风气流与室内空气充分混合置换</p></div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6 col-xs-6">
+<div class="blog-kk wow fadeInLeft" data-wow-delay="0.8s">
+<div class="blog-x">
+<img src="/images/blog2.png">
+<h4>中央空调保养 </h4>
+</div>
+<div class="blog-y"><p>杀菌灭藻改善制冷效果<br>避免设备腐蚀损坏，延长使用寿命</p></div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6 col-xs-6">
+<div class="blog-kk wow fadeInLeft" data-wow-delay="1.2s">
+<div class="blog-x">
+<img src="/images/blog3.png">
+<h4>中央空调维修 </h4>
+</div>
+<div class="blog-y"><p>全年24小时服务<br>原厂配件，质量安全有保证</p></div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6 col-xs-6">
+<div class="blog-kk wow fadeInLeft" data-wow-delay="1.6s">
+<div class="blog-x">
+<img src="/images/blog4.png">
+<h4>中央新风</h4>
+</div>
+<div class="blog-y"><p>供给室内新鲜空气，除臭除尘<br>四季冷热交换提高生活品质</p></div>
+</div>
+</div>
+</div>
+</div>
+<!--End blog-->
+<div class="container brand">
+<div class="row">
+<div class="col-lg-6 col-sm-6 col-xs-12">
+<div class="brand-k2">
+<h4>新闻动态</h4>
+{dede:arclist typeid=6 row=8 titlelen=30 orderby='pubdate' }
+<li><a href="[field:arcurl/]" title="[field:fulltitle/]">[field:title/]<span>[field:pubdate function='strftime("Y-%m-%d",@me)'/]</span></a></li>
+{/dede:arclist}
+</div>
+</div>
+<div class="col-lg-6 col-sm-12 col-xs-12">
+<div class="brand-k2">
+<h4>行业动态</h4>
+{dede:arclist typeid=8 row=8 titlelen=30 orderby='pubdate' }
+<li><a href="[field:arcurl/]" title="[field:fulltitle/]">[field:title/]<span>[field:pubdate function='strftime("Y-%m-%d",@me)'/]</span></a></li>
+{/dede:arclist}
+</div>
+</div>
+</div>
+</div>
+<!--end brand-->
+<script type="text/javascript">
+
+  $(document).ready(function(){
+
+     $(function(){
+
+         $("").fadeIn();
+
+     });
+
+     $("#blog-k .col-lg-3").hover(function(){
+
+        $(this).children(".blog-kk").children(".blog-y").stop().fadeIn();
+
+      },function(){
+
+        $(this).children(".blog-kk").children(".blog-y").stop().fadeOut();
+
+      });
+     //点击案例分类，ajax载入案例
+/*     $(".case-nav li").click(function(){
+      $(this).addClass('active').siblings('li').removeClass('active');
+      var catId = $(this).find('a').attr('alt');
+      $("#case-list").load("welcome/ajaxGetCases/" + catId);
+     });*/
+  });
+
+</script> 
+{dede:include filename="footer.htm"/}
+</body>
+</html>

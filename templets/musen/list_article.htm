@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{dede:field.seotitle /}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/animate.css" rel="stylesheet">
+<script src="/js/jquery1.11.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/wow.js"></script>
+<script src="/js/tocet.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="/js/html5shiv.min.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--nav-->
+{dede:include filename="head.htm"/}
+<!--End nav-->
+<link rel="stylesheet" href="/css/contact.css">
+
+<!--ban-->
+
+<div class="container abuot wow fadeInUp" data-wow-delay="0.4s">
+  <h3>资讯&分享</h3>
+  <li></li>
+  <p>这里有最新的公司动态及相关行业相关信息</p>
+  <p>这里有最新的三菱空调，三菱重工中央空调，中央空调保养，中央空调维修中央新风，托马仕新风等相关产品咨询！</p>
+</div>
+
+<!--End ban-->
+
+<div class="container news wow fadeInUp" data-wow-delay="0.6s">
+  <li><a href="http://tocet.com/welcome/news.html" class="act">全部资讯</a></li>
+  <li><a href="http://tocet.com/welcome/news/1.html" >腾程新闻</a></li>
+  <li><a href="http://tocet.com/welcome/news/2.html" >行业新闻</a></li>
+  <li><a href="http://tocet.com/welcome/news/149.html" >优化教程</a></li>
+</div>
+<div class="container news-k wow fadeInUp" data-wow-delay="0.8s">
+  <div class="row">
+  {dede:list row='9' pagesize='10' titlelen='30'}
+   <a href="[field:arcurl/]">
+    <div class="col-lg-4 col-sm-6 col-xs-12" title="[field:fulltitle/]">
+      <div class="new-img"> <img src="[field:litpic/]" alt="[field:fulltitle/]"> </div>
+      <div class="new-img2">
+        <li>[field:title/]...</li>
+        <p>[field:description function="cn_substr(@me,56)"/]...</p>
+        <span>[field:pubdate function='strftime("Y-%m-%d",@me)'/]</span> </div>
+    </div>
+    </a>
+   {/dede:list} 
+     </div>
+</div>
+<div class="container nav">
+  <center class="dede_pages">
+  <ul class="fenlink">
+   {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+  </ul>
+</center>
+  <link rel="stylesheet" href="/css/pagination.css">
+</div>
+<!--contact-->
+{dede:include filename="footer.htm"/}
+</body>
+</html>

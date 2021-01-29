@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+		<meta name="keywords" content="{$SEO['keyword']}">
+		<meta name="description" content="{$SEO['description']}">
+    <link href="{CSS_PATH}myi/bootstrap.min.css" rel="stylesheet">
+    <link href="{CSS_PATH}myi/style.css" rel="stylesheet">
+    <link href="{CSS_PATH}fonts/iconfont.css" rel="stylesheet">
+    <script src="{JS_PATH}myi/modernizr.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+      <script src="{JS_PATH}myi/html5shiv.min.js"></script>
+      <script src="{JS_PATH}myi/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+<div class="container-wap w640 box">
+	<div class="iphone__screen">
+{template "content","header"}	
+		<div class="iphone__content">	
+ 	<section>
+ 		<div class="case-title box w620"> 
+			<span class="position"><a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 正文</span>
+ 		</div>
+ 		<div class="list-article box w620">
+ 			{pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+ 			<ul>
+ 				{loop $data $r}
+ 				<li>
+ 					<a href="{$r[url]}" class="clear clearfix">						
+ 							<h5>{$r[title]}</h5> 							
+							<p>{str_cut($r[description],120)}…</p>
+							<p><span>详情</span></p>
+ 					</a>
+ 				</li>
+ 				{/loop}
+ 			</ul>
+			{/pc} 			
+ 		</div>
+ 	</section>
+ 	<section>
+ 		<div class="inx-title box w640"> <i class="icon iconfont icon-vertical_line"></i><h5>愉悦专家</h5></div>
+			<div class="inx-zj box w640" id="inx-zj">
+				<div class="bd">
+				 {pc:content  action="lists" moreinfo="1" catid="21"  order="listorder DESC" thumb="1" num="5"}
+					<ul>
+					{loop $data $r}
+						<li><a href="{$r['url']}"><img src="{$r['inx_exp']}" class="img-responsive"/></a></li>
+					{/loop}	
+					</ul>
+				{/pc}				
+				</div>
+				<div class="hd">
+					<ul></ul>
+				</div>		
+			</div>
+ 	</section>
+ 	<section>
+ 		<div class="inx-title box w640"> <i class="icon iconfont icon-vertical_line"></i><h5>整形日记</h5></div>
+ 		<div class="inx-case box w640" id="focus">
+			<div class="hd">
+				<ul></ul>
+			</div>
+			<div class="bd">
+				<ul>			
+					{pc:content action="lists" catid="18" order="listorder DESC" num="2" start="0"}						
+						<li class="row">
+						{loop $data $r}						
+							<div class="col-xs-6">
+								<a href="{$r[url]}"><img src="{thumb($r['thumb'],310,199)}" class="img-responsive"/></a>
+								<h5><a href="{$r[url]}">{$r[title]}</a></h5>
+								<p><a href="{$r[url]}">{str_cut($v['description'],90)}…<em>【详情】</em></a></p>
+							</div>	
+							{/loop}				
+						</li>
+					{/pc}	
+					{pc:content action="lists" catid="18" order="listorder DESC" num="2" start="2"}						
+						<li class="row">
+						{loop $data $r}						
+							<div class="col-xs-6">
+								<a href="{$r[url]}"><img src="{thumb($r['thumb'],310,199)}" class="img-responsive"/></a>
+								<h5><a href="{$r[url]}">{$r[title]}</a></h5>
+								<p><a href="{$r[url]}">{str_cut($v['description'],90)}…<em>【详情】</em></a></p>
+							</div>	
+							{/loop}				
+						</li>
+					{/pc}								
+				</ul>
+			</div> 			
+ 		</div>
+ 	</section>		 	
+{template "content","footer"}	
+  </body>
+</html>

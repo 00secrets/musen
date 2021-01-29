@@ -1,0 +1,22 @@
+	 	<section>	 		
+	 		<div class="header w640 box row">
+	 			<div class="col-xs-2 head-nav nav__trigger"><a href="JavaScript:;"><i class="nav__icon"></i></a></div>			
+	 			<div class="col-xs-8 head-logo"><a href="{siteurl($siteid)}">北京愉悦医疗美容整形医院</a></div>
+	 			<div class="col-xs-2 head-info"><a href="JavaScript:;"><i class="icon iconfont icon-xiaoxi1"></i></i></a></div>
+		  <nav class="nav">
+				
+		<div class="sideMenu" style="margin:0 auto">
+		{pc:content action="category" catid="0" num="7" siteid="$siteid" order="listorder ASC"} 
+			{loop $data $c}
+			<h3><em></em>{$c['catname']}</h3>
+			<ul>
+				{loop subcat($c['catid']) $c2}
+				<li><a href="{$c2['url']}">-{$c2['catname']}</a></li>
+				{/loop}
+			</ul>
+			{/loop}
+		{/pc}	
+		</div><!-- sideMenu End -->							
+		  </nav>  			 			
+	 		</div>		
+	 	</section>

@@ -1,0 +1,65 @@
+.fenlink {
+
+  display: inline-block;
+
+  padding-left: 0;
+
+  margin: 15px 0;
+
+  border-radius: 0px;
+
+}
+
+.fenlink > a,
+
+.fenlink > li {
+
+  font-size: 12px;
+
+  position: relative;
+
+  float: left;
+
+  padding: 10px 15px;
+
+  line-height: 1.42857143;
+
+  text-decoration: none;
+
+  color: #373e4a;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  margin-left: -1px;
+
+}
+
+.fenlink >a:hover,
+
+.fenlink >a:focus,
+
+.fenlink >li:focus {
+
+  color: #16191e;
+
+  background-color: #eeeeee;
+
+  border-color: #dddddd;
+
+}
+
+.fenlink > li {
+
+  z-index: 2;
+
+  color: #ffffff;
+
+  background-color: #3071A9;
+
+  border-color: #3071A9;
+
+  cursor: default;
+
+}

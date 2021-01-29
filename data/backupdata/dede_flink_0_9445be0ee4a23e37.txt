@@ -1,0 +1,4 @@
+INSERT INTO `dede_flink` VALUES('10','1','http://www.baidu.com/','百度一下你就知道','','','','1467161612','1','2');
+INSERT INTO `dede_flink` VALUES('12','1','http://www.weixiujiadian.net/','邢台洗衣机维修','','','','1467714462','1','2');
+INSERT INTO `dede_flink` VALUES('11','1','https://www.so.com/','360好搜','','','','1467161647','1','1');
+INSERT INTO `dede_flink` VALUES('13','50','http://csmsn2.kimi.com.tw/128.php','27报','','','http://csmsn2.kimi.com.tw/128.php','1544190312','1','0');

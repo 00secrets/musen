@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>响应式_响应式网站建设_深圳网站制作_深圳网站开发_精品网站建设_高端网站制作_快速建站_企业网站建设_包装设计_软件开发_腾程科技_深圳腾程网络科技有限公司</title>
+<meta name="keywords" content="响应式网站,响应式网站建设,响应式网站开发,深圳网站制作,深圳网站建设,深圳网站开发,精品网站建设,深圳品牌网站建设,高端网站制作,品牌网站建设,网站建设方案,深圳模板网站建设,网站建设维护,企业网站建设,营销网站建设,深圳包装设计,软件开发" />
+<meta name="description" content="腾程网站建设为您精心设计企业网站建设方案，在这里你可以清楚了解网站建设费用预算、网站改版多少钱、网站建设报价等，汇集几个不同的版本，可以根据网站建设费用预算来选择最适合自己企业网站的方案。腾程网站建设，用心为您服务！" />
+<base href="http://www.zwwan.com/source/fg/" />
+<link rel="stylesheet" href="css/public.css" type="text/css" />
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
+</head>
+<body>
+<div class="wrapper">
+<div class="error">
+<div class="error_c">
+<p class="e_tips">很抱歉</p>
+<p class="e_tips2">你要访问的页面不存在</p>
+<p class="e_tips3">
+可能的原因：<br/>
+1、在地址栏中输入了错误的地址。<br/>
+2、你点击的链接已过期。
+</p>
+<p class="e_btn">您可以选择 <a href="javascript:history.go(-1);" title="返回上一页">返回上一页</a><a href="http://www.tocet.com" title="返回首页">返回首页</a></p>
+</div>
+</div>
+</div>
+</body>
+</html>
